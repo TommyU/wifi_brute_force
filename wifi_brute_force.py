@@ -31,7 +31,7 @@ for ssid in ssids[1:]:
             temp_xml = r'./tmp.xml'
 
             with open(temp_xml,'wb') as f_out:
-                f_out.write(template_str%(ssid_name,ssid_name,'127121XX'))
+                f_out.write(template_str%(ssid_name,ssid_name,passwd))
                 
             add_cmd = r'netsh wlan add profile filename="%s"'%(temp_xml,)
             #print(os.popen(add_cmd).read())
