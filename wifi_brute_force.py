@@ -11,7 +11,7 @@ for ssid in ssids[1:]:
     details = ssid.split('\n')
     ssid_name,ssid_type = details[0].split(':')[-1].replace(' ',''),details[2].split(':')[-1].replace(' ','')
     
-    if ssid_type.find('WPA2')>-1 and ssid_name != 'Netcore':#wpa2-psk
+    if ssid_type.find('WPA2')>-1 ':#wpa2-psk
         print('=========[%s][%s]========='%(ssid_name,ssid_type))
         print('trying...')
         found = False
@@ -29,7 +29,7 @@ for ssid in ssids[1:]:
                 #passwd = ssid_name + '_'+passwd
                 continue
             temp_xml = r'./tmp.xml'
-            #passwd = '127121XX'
+
             with open(temp_xml,'wb') as f_out:
                 f_out.write(template_str%(ssid_name,ssid_name,'127121XX'))
                 
